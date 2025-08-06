@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-zen-50 to-monk-50 min-h-screen;
+  }
+}
+
+@layer components {
+  .monk-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 p-6;
+  }
+  
+  .monk-button {
+    @apply bg-gradient-to-r from-monk-500 to-monk-600 hover:from-monk-600 hover:to-monk-700 
+           text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl 
+           transform hover:scale-105 transition-all duration-200;
+  }
+  
+  .zen-button {
+    @apply bg-gradient-to-r from-zen-500 to-zen-600 hover:from-zen-600 hover:to-zen-700 
+           text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl 
+           transform hover:scale-105 transition-all duration-200;
+  }
+}
